@@ -6,7 +6,7 @@
 	var/siphoning = FALSE
 	var/next_warning = 0
 	var/obj/item/radio/radio
-	var/radio_channel = RADIO_CHANNEL_COMMON
+	var/radio_channel = RADIO_CHANNEL_SUPPLY
 	var/minimum_time_between_warnings = 400
 	var/syphoning_credits = 0
 
