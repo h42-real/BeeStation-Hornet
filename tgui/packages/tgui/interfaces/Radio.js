@@ -32,30 +32,6 @@ export const Radio = (props, context) => {
       <Window.Content>
         <Section>
           <LabeledList>
-            <LabeledList.Item label="Frequency">
-              {freqlock && (
-                <Box inline color="light-gray">
-                  {toFixed(frequency / 10, 1) + ' kHz'}
-                </Box>
-              ) || (
-                <NumberInput
-                  animate
-                  unit="kHz"
-                  step={0.2}
-                  stepPixelSize={10}
-                  minValue={minFrequency / 10}
-                  maxValue={maxFrequency / 10}
-                  value={frequency / 10}
-                  format={value => toFixed(value, 1)}
-                  onDrag={(e, value) => act('frequency', {
-                    adjust: (value - frequency / 10),
-                  })} />
-              )}
-              {tunedChannel && (
-                <Box inline color={tunedChannel.color} ml={2}>
-                  [{tunedChannel.name}]
-                </Box>
-              )}
             </LabeledList.Item>
             <LabeledList.Item label="Audio">
               <Button
