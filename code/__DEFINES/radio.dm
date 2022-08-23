@@ -2,8 +2,8 @@
 
 //say based modes like binary are in living/say.dm
 
-#define RADIO_CHANNEL_COMMON "Common"
-#define RADIO_KEY_COMMON ";"
+#define RADIO_CHANNEL_CIVILIAN "Civilian"
+#define RADIO_KEY_CIVILIAN ";"
 
 #define RADIO_CHANNEL_SECURITY "Security"
 #define RADIO_KEY_SECURITY "s"
@@ -36,6 +36,10 @@
 #define RADIO_CHANNEL_EXPLORATION "Exploration"
 #define RADIO_KEY_EXPLORATION "q"
 #define RADIO_TOKEN_EXPLORATION ":q"
+
+#define RADIO_CHANNEL_WALKIE "Walkie"
+#define RADIO_KEY_WALKIE "w"
+#define RADIO_TOKEN_EXPLORATION ":w"// **************************************Fix these later
 
 #define RADIO_CHANNEL_AI_PRIVATE "AI Private"
 #define RADIO_KEY_AI_PRIVATE "o"
@@ -89,8 +93,9 @@
 #define FREQ_ELECTROPACK 1449
 #define FREQ_MAGNETS 1449
 #define FREQ_LOCATOR_IMPLANT 1451
+#define FREQ_WALKIE 1455
 #define FREQ_SIGNALER 1457  //! the default for new signalers
-#define FREQ_COMMON 1459  //! Common comms frequency, dark green
+#define FREQ_CIVILIAN 1459  //! Civilian comms frequency, dark green, formerly common
 
 #define MAX_FREQ 1489 // ------------------------------------------------------
 
