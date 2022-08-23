@@ -163,7 +163,7 @@
 /obj/item/bountytrap/proc/announce_fugitive()
 	spark_system.start()
 	playsound(src, 'sound/machines/ding.ogg', 50, 1)
-	radio.talk_into(src, "Fugitive has triggered this trap in the [get_area_name(src)]!", RADIO_CHANNEL_COMMON)
+	radio.talk_into(src, "Fugitive has triggered this trap in the [get_area_name(src)]!", RADIO_CHANNEL_WALKIE)
 
 /obj/item/bountytrap/attack_self(mob/living/user)
 	var/turf/T = get_turf(src)
