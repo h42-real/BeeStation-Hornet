@@ -68,6 +68,7 @@
 #define FREQ_CTF_RED 1215  //!  CTF red team comms frequency, red
 #define FREQ_CTF_BLUE 1217  //!  CTF blue team comms frequency, blue
 #define FREQ_CENTCOM 1337  //!  CentCom comms frequency, gray
+#define FREQ_CIVILIAN 1345  //! Civilian comms frequency, dark green
 #define FREQ_SUPPLY 1347  //!  Supply comms frequency, light brown
 #define FREQ_SERVICE 1349  //! Service comms frequency, green
 #define FREQ_SCIENCE 1351  //! Science comms frequency, plum
@@ -93,9 +94,8 @@
 #define FREQ_ELECTROPACK 1449
 #define FREQ_MAGNETS 1449
 #define FREQ_LOCATOR_IMPLANT 1451
-#define FREQ_WALKIE 1455
 #define FREQ_SIGNALER 1457  //! the default for new signalers
-#define FREQ_CIVILIAN 1459  //! Civilian comms frequency, dark green, formerly common
+#define FREQ_WALKIE 1459  //! Emergency radio comms frequency, light green
 
 #define MAX_FREQ 1489 // ------------------------------------------------------
 
