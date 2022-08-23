@@ -1,9 +1,11 @@
 // Radios use a large variety of predefined frequencies.
 
 //say based modes like binary are in living/say.dm
+#define RADIO_KEY_COMMON ";"
 
 #define RADIO_CHANNEL_CIVILIAN "Civilian"
-#define RADIO_KEY_CIVILIAN ";"
+#define RADIO_KEY_CIVILIAN "l"
+#define RADIO_TOKEN_CIVILIAN ":l"
 
 #define RADIO_CHANNEL_SECURITY "Security"
 #define RADIO_KEY_SECURITY "s"
