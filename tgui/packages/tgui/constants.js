@@ -76,6 +76,11 @@ export const RADIO_CHANNELS = [
     color: '#2681a5',
   },
   {
+    name: 'Civilian',
+    freq: 1345,
+    color: '#1ecc43',
+  },
+  {
     name: 'Supply',
     freq: 1347,
     color: '#b88646',
@@ -120,10 +125,10 @@ export const RADIO_CHANNELS = [
     freq: 1447,
     color: '#d65d95',
   },
-  {
-    name: 'Common',
+   {
+    name: 'Walkie',
     freq: 1459,
-    color: '#1ecc43',
+    color: '#d9f25c',
   },
 ];
 
