@@ -1,8 +1,6 @@
 // Radios use a large variety of predefined frequencies.
 
 //say based modes like binary are in living/say.dm
-#define RADIO_KEY_COMMON ";"
-
 #define RADIO_CHANNEL_CIVILIAN "Civilian"
 #define RADIO_KEY_CIVILIAN "l"
 #define RADIO_TOKEN_CIVILIAN ":l"
@@ -41,7 +39,7 @@
 
 #define RADIO_CHANNEL_WALKIE "Walkie"
 #define RADIO_KEY_WALKIE "w"
-#define RADIO_TOKEN_EXPLORATION ":w"// **************************************Fix these later
+#define RADIO_TOKEN_WALKIE ":w"
 
 #define RADIO_CHANNEL_AI_PRIVATE "AI Private"
 #define RADIO_KEY_AI_PRIVATE "o"
@@ -70,9 +68,9 @@
 #define FREQ_CTF_RED 1215  //!  CTF red team comms frequency, red
 #define FREQ_CTF_BLUE 1217  //!  CTF blue team comms frequency, blue
 #define FREQ_CENTCOM 1337  //!  CentCom comms frequency, gray
-#define FREQ_CIVILIAN 1345  //! Civilian comms frequency, dark green
+#define FREQ_CIVILIAN 1345  //! Civilian comms frequency, green
 #define FREQ_SUPPLY 1347  //!  Supply comms frequency, light brown
-#define FREQ_SERVICE 1349  //! Service comms frequency, green
+#define FREQ_SERVICE 1349  //! Service comms frequency, dark green
 #define FREQ_SCIENCE 1351  //! Science comms frequency, plum
 #define FREQ_COMMAND 1353  //! Command comms frequency, gold
 #define FREQ_MEDICAL 1355  //! Medical comms frequency, soft blue

@@ -1,6 +1,6 @@
 // Used for translating channels to tokens on examination
 GLOBAL_LIST_INIT(channel_tokens, list(
-	RADIO_CHANNEL_CIVILIAN = RADIO_KEY_CIVILIAN,
+	RADIO_CHANNEL_CIVILIAN = RADIO_TOKEN_CIVILIAN,
 	RADIO_CHANNEL_SCIENCE = RADIO_TOKEN_SCIENCE,
 	RADIO_CHANNEL_COMMAND = RADIO_TOKEN_COMMAND,
 	RADIO_CHANNEL_MEDICAL = RADIO_TOKEN_MEDICAL,
@@ -29,6 +29,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	var/bang_protect = 0 //this isn't technically clothing so it needs its own bang_protect var
 
 	slot_flags = ITEM_SLOT_EARS
+	var/obj/item/encryptionkey/keyslot2 = null
 	dog_fashion = null
 
 /obj/item/radio/headset/suicide_act(mob/living/carbon/user)
@@ -40,7 +41,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 	if(item_flags & PICKED_UP && loc == user)
 		// construction of frequency description
-		var/list/avail_chans = list("Use [RADIO_KEY_COMMON] for the currently tuned frequency")
+		var/list/avail_chans = list("Use ; for the currently tuned frequency")
 		if(translate_binary)
 			avail_chans += "use [MODE_TOKEN_BINARY] for [MODE_BINARY]"
 		if(length(channels))
@@ -103,7 +104,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset/binary/Initialize(mapload)
 	. = ..()
 	qdel(keyslot)
-	keyslot = new /obj/item/encryptionkey/binary
+	keyslot = new /obj/item/encryptionkey/secondary/binary
 	recalculateChannels()
 
 /obj/item/radio/headset/headset_sec
@@ -160,6 +161,12 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	desc = "In the criminal justice headset, the encryption key represents two separate but equally important groups. Sec, who investigate crime, and Service, who provide services. These are their comms."
 	icon_state = "srvsec_headset"
 	keyslot = new /obj/item/encryptionkey/headset_srvsec
+
+/obj/item/radio/headset/headset_civ
+	name = "civilian radio headset"
+	desc = "An updated, modular intercom that fits over the head. Takes encryption keys." //make funnier
+	icon_state = "headset"
+	keyslot = new /obj/item/encryptionkey/headset_civ
 
 /obj/item/radio/headset/headset_com
 	name = "command radio headset"
@@ -319,15 +326,19 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 			to_chat(user, "<span class='warning'>The headset can't hold another key!</span>")
 			return
 
-		if(!keyslot)
+		else if(!keyslot2 && istype(/obj/item/encryptionkey/secondary))
+			if(!user.transferItemToLoc(W, src))
+				return
+			keyslot2 = W
+
+		else if(!keyslot)
 			if(!user.transferItemToLoc(W, src))
 				return
 			keyslot = W
 
 		else
-			if(!user.transferItemToLoc(W, src))
-				return
-			keyslot2 = W
+			to_chat(user, "<span class='warning'>The headset cannot hold another key of this type!</span>")
+			return
 
 
 		recalculateChannels()

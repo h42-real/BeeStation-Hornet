@@ -83,7 +83,7 @@
 
 /obj/item/radio/proc/make_syndie() // Turns normal radios into Syndicate radios!
 	qdel(keyslot)
-	keyslot = new /obj/item/encryptionkey/syndicate
+	keyslot = new /obj/item/encryptionkey/secondary/syndicate
 	syndie = 1
 	recalculateChannels()
 	ui_update()
@@ -411,7 +411,7 @@
 
 /obj/item/radio/borg/syndicate
 	syndie = 1
-	keyslot = new /obj/item/encryptionkey/syndicate
+	keyslot = new /obj/item/encryptionkey/secondary/syndicate
 
 /obj/item/radio/borg/syndicate/Initialize(mapload)
 	. = ..()

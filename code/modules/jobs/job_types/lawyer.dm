@@ -32,7 +32,7 @@
 
 	id = /obj/item/card/id/job/lawyer
 	belt = /obj/item/pda/lawyer
-	ears = /obj/item/radio/headset/headset_srvsec
+	ears = /obj/item/radio/headset/headset_civ
 	uniform = /obj/item/clothing/under/rank/civilian/lawyer/bluesuit
 	suit = /obj/item/clothing/suit/toggle/lawyer
 	shoes = /obj/item/clothing/shoes/laceup

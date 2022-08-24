@@ -1527,7 +1527,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "A key that, when inserted into a radio headset, allows you to listen to and talk with silicon-based lifeforms, \
 			such as AI units and cyborgs, over their private binary channel. Caution should \
 			be taken while doing this, as unless they are allied with you, they are programmed to report such intrusions."
-	item = /obj/item/encryptionkey/binary
+	item = /obj/item/encryptionkey/secondary/binary
 	cost = 4
 	surplus = 75
 	restricted = TRUE
@@ -1736,7 +1736,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "Syndicate Encryption Key"
 	desc = "A key that, when inserted into a radio headset, allows you to listen to all station department channels \
 			as well as talk on an encrypted Syndicate channel with other agents that have the same key."
-	item = /obj/item/encryptionkey/syndicate
+	item = /obj/item/encryptionkey/secondary/syndicate
 	cost = 2
 	surplus = 75
 	purchasable_from = ~UPLINK_INCURSION

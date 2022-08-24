@@ -24,13 +24,13 @@
 
 		. += "<span class='notice'>It can access the following channels; [jointext(examine_text_list, ", ")].</span>"
 
-/obj/item/encryptionkey/syndicate
+/obj/item/encryptionkey/secondary/syndicate
 	name = "syndicate encryption key"
 	icon_state = "syn_cypherkey"
 	channels = list(RADIO_CHANNEL_SYNDICATE = 1)
 	syndie = TRUE//Signifies that it de-crypts Syndicate transmissions
 
-/obj/item/encryptionkey/binary
+/obj/item/encryptionkey/secondary/binary
 	name = "binary translator key"
 	icon_state = "bin_cypherkey"
 	translate_binary = TRUE
@@ -80,7 +80,7 @@
 	icon_state = "srvsec_cypherkey"
 	channels = list(RADIO_CHANNEL_SERVICE = 1, RADIO_CHANNEL_SECURITY = 1)
 
-/obj/item/encryptionkey/headset_com
+/obj/item/encryptionkey/secondary/headset_com
 	name = "command radio encryption key"
 	icon_state = "com_cypherkey"
 	channels = list(RADIO_CHANNEL_COMMAND = 1)
@@ -144,6 +144,11 @@
 	name = "curator radio encryption key"
 	icon_state = "srv_cypherkey"
 	channels = list(RADIO_CHANNEL_SERVICE = 1, RADIO_CHANNEL_EXPLORATION = 1)
+
+/obj/item/encryptionkey/headset_civ
+	name = "civilian radio encryption key"
+	icon_state = "srv_cypherkey"
+	channels = list(RADIO_CHANNEL_CIVILIAN = 1)
 
 /obj/item/encryptionkey/headset_cent
 	name = "\improper CentCom radio encryption key"

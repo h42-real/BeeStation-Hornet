@@ -139,7 +139,7 @@
 
 /obj/item/implant/radio/syndicate
 	desc = "Are you there God? It's me, Syndicate Comms Agent."
-	radio_key = /obj/item/encryptionkey/syndicate
+	radio_key = /obj/item/encryptionkey/secondary/syndicate
 	subspace_transmission = TRUE
 
 /obj/item/implant/radio/slime
