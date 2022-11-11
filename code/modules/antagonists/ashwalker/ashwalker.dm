@@ -31,8 +31,8 @@
 /datum/antagonist/ashwalker/on_gain()
 	. = ..()
 	RegisterSignal(owner.current, COMSIG_MOB_EXAMINATE, .proc/on_examinate)
-	owner.teach_crafting_recipe(/datum/crafting_recipe/skeleton_key, /datum/crafting_recipe/drakecloak)
-
+	owner.teach_crafting_recipe(/datum/crafting_recipe/skeleton_key)
+	owner.teach_crafting_recipe(/datum/crafting_recipe/drakecloak)
 /datum/antagonist/ashwalker/on_removal()
 	. = ..()
 	UnregisterSignal(owner.current, COMSIG_MOB_EXAMINATE)
